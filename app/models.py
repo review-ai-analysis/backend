@@ -1,9 +1,11 @@
-from sqlalchemy import Column, Integer, Text, VARCHAR, ForeignKey, create_engine, Float, DateTime, Table
-from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy import Column, Integer, Text, VARCHAR, create_engine, Float, DateTime, Table
+from sqlalchemy.orm import declarative_base
 
+#debug
+#engine = create_engine("postgresql://darkfox:11cana11@195.140.146.94:5433/darkfox")
 
+#production
 engine = create_engine("postgresql://darkfox:11cana11@database:5432/darkfox")
-
 Base = declarative_base(bind=engine)
 
 
